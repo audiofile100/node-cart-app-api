@@ -1,0 +1,45 @@
+[
+    {
+        "productid" : "60249e83da7ee288f2a5c02b",
+        "userid" : "60245c36f4f8567cefcb8762",
+        "title" : "Samsung S10",
+        "review" : "I am use samsung s10 mobile. Its a nice phone. I like it and the camera is amazing.",
+        "rating" : "4.5"
+    },
+    {
+        "productid" : "60249e83da7ee288f2a5c02b",
+        "userid" : "",
+        "title" : "Samsung S20 best of 2020",
+        "review" : "Just like the screen, performance is slick. The S20 has Qualcomm's Snapdragon 865 chip inside with 12 GB of RAM, which is probably excessive, but I've never once seen a slowdown or sputtereven after an hour surviving in Player Unknown's Battlegrounds. Samsung has nailed battery life too.",
+        "rating" : "4.0"
+    },
+    {
+        "productid" : "60249e83da7ee288f2a5c02b",
+        "userid" : "",
+        "title" : "Happy customer",
+        "review" : "I bought 2 tvs from samsung for my home and the picture quality is outstanding! I would definitely buy them again.",
+        "rating" : "3.8"
+    },
+
+    {
+        "productid" : "6026a41f311d570863363e22",
+        "userid" : "",
+        "title" : "Amazing",
+        "review" : "Such a cool powerful machine. Games install and download very quickly. The controller is epic.. Looking forward to the future of this industry :)",
+        "rating" : "5.0"
+    },
+    {
+        "productid" : "6026a41f311d570863363e22",
+        "userid" : "",
+        "title" : "Great Console",
+        "review" : "So fast and stays cool. Added bonus my Dad thinks it looks like a sandwich press.",
+        "rating" : "5.0"
+    },
+    {
+        "productid" : "6026a41f311d570863363e22",
+        "userid" : "",
+        "title" : "Awesome! Love it",
+        "review" : "One of the best consoles I've owned it exceeded my expectations and has soooo much to offer now and in the future if your still undecided on buying one its well worth every cent, and Thank you MightyApe for the fast shipping on it wasn't expecting it until monday/next week",
+        "rating" : "5.0"
+    },
+]
