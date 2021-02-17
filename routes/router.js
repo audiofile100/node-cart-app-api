@@ -215,16 +215,16 @@ router.post("/api/saveReview", (req, res) => {
     });
 });
 
-// router.get("/api/getReviews/:id", (req, res) => {
+router.get("/api/getReviews/:id", (req, res) => {
     
-//     ReviewModel.find({'productid': req.params.id}, function (err, result) {
-//         console.log("RESULT ", req.params.id);
-//         err ? 
-//         res.send({"error": err}) 
-//         :
-//         res.send(result);
-//     });
-// });
+    ReviewModel.find({'productid': req.params.id}, function (err, result) {
+        console.log("RESULT ", req.params.id);
+        err ? 
+        res.send({"error": err}) 
+        :
+        res.send(result);
+    });
+});
 
 router.get("/api/getReviews", (req, res) => {
 
