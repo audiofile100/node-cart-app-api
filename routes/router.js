@@ -203,16 +203,45 @@ router.post("/api/addCancel", (req, res) => {
 });
 
 // review api
+// router.post("/api/saveReview", (req, res) => {
+
+//     let reviewObj = new ReviewModel(req.body);
+    
+//     reviewObj.save((err, data, next) => {
+//         if (err) {
+//             res.send("error " + err);
+//         }
+//         res.json(data);
+//     });
+// });
+
 router.post("/api/saveReview", (req, res) => {
 
-    let reviewObj = new ReviewModel(req.body);
-    
-    reviewObj.save((err, data, next) => {
+    ReviewModel.findOne({'userid': req.body.userid, 'productid': req.body.productid}, function (err, reviewObj) {
         if (err) {
-            res.send("error " + err);
+            res.send({"error" : err});
         }
-        res.json(data);
-    });
+        if (reviewObj) {
+            reviewObj.review = req.body.review;
+            reviewObj.rating = req.body.rating;
+
+            reviewObj.save((err, data, next) => {
+                if (err) {
+                    res.send("error " + err);
+                }
+                res.json(data);
+            });
+        } else {
+            let newReviewObj = new ReviewModel(req.body);
+    
+            newReviewObj.save((err, data, next) => {
+                if (err) {
+                    res.send("error " + err);
+                }
+                res.json(data);
+            });
+        }
+    })
 });
 
 router.get("/api/getReviews/:id", (req, res) => {
@@ -235,6 +264,17 @@ router.get("/api/getReviews", (req, res) => {
         res.send({"error": err}) 
         :
         res.send(data);
+    });
+});
+
+router.get("/api/getMyReview/:uid/:pid", (req, res) => {
+    
+    ReviewModel.find({'userid': req.params.uid, 'productid': req.params.pid}, function (err, result) {
+        console.log("RESULT ", req.params.uid);
+        err ? 
+        res.send({"error": err}) 
+        :
+        res.send(result);
     });
 });
 
